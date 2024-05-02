@@ -4,6 +4,11 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import Github from "../About/Github";
+import Techstack from "../About/Techstack";
+import Aboutcard from "../About/AboutCard";
+import laptopImg from "../../Assets/about.png";
+import Toolstack from "../About/Toolstack";
 
 function Home() {
   return (
@@ -22,7 +27,7 @@ function Home() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> SOUMYAJIT BEHERA</strong>
+                <strong className="main-name"> FRANCESCA ROSSI </strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
@@ -39,9 +44,44 @@ function Home() {
               />
             </Col>
           </Row>
+      <Home2 />
+      <Particle />
+        <Row style={{ justifyContent: "center", padding: "10px" }}>
+          <Col
+            md={7}
+            style={{
+              justifyContent: "center",
+              paddingTop: "30px",
+              paddingBottom: "50px",
+            }}
+          >
+            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+              Know Who <strong className="purple">I'M</strong>
+            </h1>
+            <Aboutcard />
+          </Col>
+          <Col
+            md={5}
+            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            className="about-img"
+          >
+            <img src={laptopImg} alt="about" className="img-fluid" />
+          </Col>
+        </Row>
+        <h1 className="project-heading">
+          Professional <strong className="purple">Skillset </strong>
+        </h1>
+
+        <Techstack />
+
+        <h1 className="project-heading">
+          <strong className="purple">Tools</strong> I use
+        </h1>
+        <Toolstack />
+
+        <Github />
         </Container>
       </Container>
-      <Home2 />
     </section>
   );
 }
